@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin>
+
+   <extension
+         id="product"
+         point="org.eclipse.core.runtime.products">
+      <product
+            name="com.dsideal.jbp.bt"
+            application="org.eclipse.e4.ui.workbench.swt.E4Application">
+         <property
+               name="clearPersistedState"
+               value="true">
+         </property>
+         <property
+               name="applicationCSS"
+               value="platform:/plugin/com.dsideal.jbp.bt/css/default.css">
+         </property>
+         <property
+               name="appName"
+               value="com.dsideal.jbp.bt">
+         </property>
+         <property
+               name="startupForegroundColor"
+               value="000000">
+         </property>
+         <property
+               name="startupMessageRect"
+               value="10,155,435,16">
+         </property>
+         <property
+               name="startupProgressRect"
+               value="10,175,435,16">
+         </property>
+         <property
+               name="preferenceCustomization"
+               value="plugin_customization.ini">
+         </property>
+         <property
+               name="windowImages"
+               value="icons/jbp16.gif,icons/calc32.png">
+         </property>
+      </product>
+   </extension>
+
+</plugin>

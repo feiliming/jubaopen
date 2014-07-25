@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:application="http://www.eclipse.org/ui/2010/UIModel/application" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmi:id="_i-xEEPqtEeOAy8be7iXkNQ" elementId="com.dsideal.jbp.bt">
+  <children xsi:type="basic:TrimmedWindow" xmi:id="_i-xEEfqtEeOAy8be7iXkNQ" label="聚宝盆 - 倍投关系计算器" iconURI="platform:/plugin/com.dsideal.jbp.bt/icons/jbp32.gif" tooltip="倍投关系计算" width="800" height="600">
+    <children xsi:type="basic:PartStack" xmi:id="_cSaVQPq3EeOAy8be7iXkNQ" elementId="com.dsideal.jbp.bt.partstack.0">
+      <children xsi:type="basic:Part" xmi:id="_cqmy0Pq3EeOAy8be7iXkNQ" elementId="com.dsideal.jbp.bt.part.0" contributionURI="bundleclass://com.dsideal.jbp.bt/com.dsideal.jbp.bt.parts.MultiplePart" label="倍投关系计算" iconURI="platform:/plugin/com.dsideal.jbp.bt/icons/calc16.png"/>
+    </children>
+  </children>
+  <addons xmi:id="_i-xEEvqtEeOAy8be7iXkNQ" elementId="org.eclipse.e4.core.commands.service" contributionURI="bundleclass://org.eclipse.e4.core.commands/org.eclipse.e4.core.commands.CommandServiceAddon"/>
+  <addons xmi:id="_i-xEE_qtEeOAy8be7iXkNQ" elementId="org.eclipse.e4.ui.contexts.service" contributionURI="bundleclass://org.eclipse.e4.ui.services/org.eclipse.e4.ui.services.ContextServiceAddon"/>
+  <addons xmi:id="_i-xEFPqtEeOAy8be7iXkNQ" elementId="org.eclipse.e4.ui.bindings.service" contributionURI="bundleclass://org.eclipse.e4.ui.bindings/org.eclipse.e4.ui.bindings.BindingServiceAddon"/>
+  <addons xmi:id="_i-xEFfqtEeOAy8be7iXkNQ" elementId="org.eclipse.e4.ui.workbench.commands.model" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.CommandProcessingAddon"/>
+  <addons xmi:id="_i-xEFvqtEeOAy8be7iXkNQ" elementId="org.eclipse.e4.ui.workbench.handler.model" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.HandlerProcessingAddon"/>
+  <addons xmi:id="_i-xEF_qtEeOAy8be7iXkNQ" elementId="org.eclipse.e4.ui.workbench.contexts.model" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.ContextProcessingAddon"/>
+  <addons xmi:id="_i-xEGPqtEeOAy8be7iXkNQ" elementId="org.eclipse.e4.ui.workbench.bindings.model" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.swt/org.eclipse.e4.ui.workbench.swt.util.BindingProcessingAddon"/>
+</application:Application>
