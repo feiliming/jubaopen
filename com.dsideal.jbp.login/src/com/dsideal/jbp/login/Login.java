@@ -22,13 +22,14 @@ public class Login {
 		
 		final Shell shell = new Shell(SWT.INHERIT_NONE);
 		final LoginDialog dialog = new LoginDialog(shell);
+		//记住用户名
 		if (userPreference != null) {
 			dialog.setUser(userPreference);
 		}
 		//记住密码
-		//if (passwordPreference != null) {
-		//	dialog.setPassword(passwordPreference);
-		//}
+		if (passwordPreference != null) {
+			dialog.setPassword(passwordPreference);
+		}
 		dialog.create();
 		
 		if (dialog.open() != Window.OK) {
