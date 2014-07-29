@@ -8,13 +8,14 @@ import org.eclipse.jface.dialogs.Dialog;
 import org.eclipse.jface.dialogs.IDialogConstants;
 import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.swt.SWT;
+import org.eclipse.swt.custom.CLabel;
 import org.eclipse.swt.events.FocusEvent;
 import org.eclipse.swt.events.FocusListener;
-import org.eclipse.swt.events.KeyEvent;
-import org.eclipse.swt.events.KeyListener;
 import org.eclipse.swt.events.TraverseEvent;
 import org.eclipse.swt.events.TraverseListener;
+import org.eclipse.swt.graphics.Color;
 import org.eclipse.swt.graphics.Image;
+import org.eclipse.swt.graphics.RGB;
 import org.eclipse.swt.graphics.Rectangle;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
@@ -37,6 +38,8 @@ public class LoginDialog extends Dialog{
 	protected Composite loginComposite;
 	private final Shell shell;
 	private Image titleImage;
+	private Image userNameImage;
+	private Image passwordImage;
 	private ImageDescriptor imageDescriptor;
 
 	public LoginDialog() {
@@ -58,7 +61,7 @@ public class LoginDialog extends Dialog{
 	protected Control createDialogArea(Composite parent) {
 		parent.setBackgroundMode(SWT.INHERIT_DEFAULT);
 		Composite control = createContentArea(parent);
-//		control.setData("org.eclipse.e4.ui.css.id", "LoginDialog");
+		control.setData("org.eclipse.e4.ui.css.id", "LoginDialog");
 		Rectangle controlRect = control.getBounds();
 		
 		// looks strange in multi monitor environments
@@ -76,7 +79,8 @@ public class LoginDialog extends Dialog{
 
 	protected Composite createContentArea(Composite parent) {
 		Composite composite = new Composite(parent, SWT.NONE);
-		composite.setBackgroundMode(SWT.INHERIT_DEFAULT);
+		//composite.setBackgroundMode(SWT.INHERIT_DEFAULT);
+		parent.setBackground(new Color(null, new RGB(239,228,176)));
 		GridLayout gridLayout = new GridLayout();
 		gridLayout.numColumns = 1;
 		gridLayout.marginHeight = 0;
@@ -84,7 +88,7 @@ public class LoginDialog extends Dialog{
 		composite.setLayout(gridLayout);
 
 		if (imageDescriptor == null) {
-			imageDescriptor = imageDescriptorFromURI(URI.createURI("platform:/plugin/com.dsideal.jbp.login/icons/juno.png"));
+			imageDescriptor = imageDescriptorFromURI(URI.createURI("platform:/plugin/com.dsideal.jbp.login/icons/jubaopen.png"));
 		}
 		if (imageDescriptor != null) {
 			titleImage = imageDescriptor.createImage();
@@ -99,7 +103,6 @@ public class LoginDialog extends Dialog{
 		}
 		
 		Composite userPasswordComposite = new Composite(composite, SWT.NONE);
-//		userPasswordComposite.setData("org.eclipse.e4.ui.css.id", "LoginDialog");
 		GridLayout gridLayout2 = new GridLayout(2,false);
 		gridLayout2.marginHeight = 0;
 		gridLayout2.marginWidth = 30;
@@ -118,25 +121,22 @@ public class LoginDialog extends Dialog{
                 | GridData.HORIZONTAL_ALIGN_FILL);
 		errorMessageLabel.setLayoutData(gridData);
 		
-		Label userLabel = new Label(userPasswordComposite, SWT.NONE);
+		CLabel userLabel = new CLabel(userPasswordComposite, SWT.NONE);
 		userLabel.setText("用户名: ");
-		userText = new Text(userPasswordComposite, SWT.MULTI | SWT.WRAP);
+		userNameImage = imageDescriptorFromURI(URI.createURI("platform:/plugin/com.dsideal.jbp.login/icons/username16.png")).createImage();
+		userLabel.setImage(userNameImage);
+		userText = new Text(userPasswordComposite, SWT.BORDER);
 		userText.setText(user);
 		gridData = new GridData();
 		gridData.grabExcessHorizontalSpace = true;
 		gridData.horizontalAlignment = GridData.FILL;
 		userText.setLayoutData(gridData);
-		userText.addTraverseListener(new TraverseListener() {
-		    public void keyTraversed(TraverseEvent e) {
-				if (e.detail == SWT.TRAVERSE_TAB_NEXT || e.detail == SWT.TRAVERSE_TAB_PREVIOUS) {
-				  e.doit = true;
-				}
-		    }
-		});
 		
-		Label passwordLabel = new Label(userPasswordComposite, SWT.NONE);
+		CLabel passwordLabel = new CLabel(userPasswordComposite, SWT.NONE);
 		passwordLabel.setText("密   码: ");
-		passwordText = new Text(userPasswordComposite, SWT.PASSWORD);
+		passwordImage = imageDescriptorFromURI(URI.createURI("platform:/plugin/com.dsideal.jbp.login/icons/password16.png")).createImage();
+		passwordLabel.setImage(passwordImage);
+		passwordText = new Text(userPasswordComposite, SWT.PASSWORD | SWT.BORDER);
 		passwordText.setText(password);
 		
 		gridData = new GridData();
@@ -145,58 +145,36 @@ public class LoginDialog extends Dialog{
 		passwordText.setLayoutData(gridData);
 		
 		//添加监听
-//		addListeners();
+		addListeners();
 		
 		return composite;
 	}
 	
 	private void addListeners(){
-//		userText.addFocusListener(new FocusListener() {
-//			@Override
-//			public void focusLost(FocusEvent e) {
-//				
-//			}
-//			
-//			@Override
-//			public void focusGained(FocusEvent e) {
-//				errorMessageLabel.setText("");
-//			}
-//		});
+		//tab键切换输入框
 		userText.addTraverseListener(new TraverseListener() {
-			
-			@Override
 			public void keyTraversed(TraverseEvent e) {
 				if (e.detail == SWT.TRAVERSE_TAB_NEXT || e.detail == SWT.TRAVERSE_TAB_PREVIOUS) {
-			          e.doit = true;
+			          //e.doit = true;//e.doit=true不起作用呢?
+			          passwordText.setFocus();
 		        }
 			}
 		});
-//		passwordText.addFocusListener(new FocusListener() {
-//			@Override
-//			public void focusLost(FocusEvent e) {
-//				
-//			}
-//			
-//			@Override
-//			public void focusGained(FocusEvent e) {
-//				errorMessageLabel.setText("");
-//			}
-//		});
-//		passwordText.addTraverseListener(new TraverseListener() {
-//			
-//			@Override
-//			public void keyTraversed(TraverseEvent e) {
-//				if (e.detail == SWT.TRAVERSE_TAB_NEXT || e.detail == SWT.TRAVERSE_TAB_PREVIOUS) {
-//					e.doit = true;
-//		        }
-//			}
-//		});
+		//tab键切换输入框
+		passwordText.addTraverseListener(new TraverseListener() {
+			public void keyTraversed(TraverseEvent e) {
+				if (e.detail == SWT.TRAVERSE_TAB_NEXT || e.detail == SWT.TRAVERSE_TAB_PREVIOUS) {
+			          //e.doit = true;//e.doit=true不起作用呢?
+			          userText.setFocus();
+		        }
+			}
+		});
 	};
 	
 	@Override
 	protected void createButtonsForButtonBar(Composite parent) {
 		// create OK and Cancel buttons by default
-		parent.setBackgroundMode(SWT.INHERIT_DEFAULT);
+		//parent.setBackgroundMode(SWT.INHERIT_DEFAULT);
 		createButton(parent, IDialogConstants.OK_ID, "登录",
 				true);
 		createButton(parent, IDialogConstants.CANCEL_ID,
@@ -207,6 +185,12 @@ public class LoginDialog extends Dialog{
 	public boolean close() {
 		if (titleImage != null) {
 			titleImage.dispose();
+		}
+		if(userNameImage != null){
+			userNameImage.dispose();
+		}
+		if(passwordImage != null){
+			passwordImage.dispose();
 		}
 		return super.close();
 	}
@@ -220,17 +204,21 @@ public class LoginDialog extends Dialog{
 			//InputDialog inputDialog = new InputDialog(shell, "提示", "用户名不能为空！", "", new MyValidator());
 			//inputDialog.open();
 			errorMessageLabel.setText("请输入用户名.");
+			userText.setFocus();
 			return;
 		}
 		if("".equals(password)){
 			errorMessageLabel.setText("请输入密码.");
+			passwordText.setFocus();
 			return;
 		}
-		if(!"admin".equals(user) && !"admin".equals(password)){
+		if("admin".equals(user) && "admin".equals(password)){
+			super.okPressed();
+		}else{
 			errorMessageLabel.setText("用户名和密码不正确.");
+			userText.setFocus();
 			return;
 		}
-		super.okPressed();
 	}
 
 	public ImageDescriptor imageDescriptorFromURI(URI iconPath) {

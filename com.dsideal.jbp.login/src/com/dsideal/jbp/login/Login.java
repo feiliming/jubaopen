@@ -25,9 +25,10 @@ public class Login {
 		if (userPreference != null) {
 			dialog.setUser(userPreference);
 		}
-		if (passwordPreference != null) {
-			dialog.setPassword(passwordPreference);
-		}
+		//记住密码
+		//if (passwordPreference != null) {
+		//	dialog.setPassword(passwordPreference);
+		//}
 		dialog.create();
 		
 		if (dialog.open() != Window.OK) {
