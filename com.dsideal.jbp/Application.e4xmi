@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:advanced="http://www.eclipse.org/ui/2010/UIModel/application/ui/advanced" xmlns:application="http://www.eclipse.org/ui/2010/UIModel/application" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmi:id="_Hs5YYBbHEeS6rMUvs75EeQ" elementId="org.eclipse.e4.ide.application">
+  <children xsi:type="basic:TrimmedWindow" xmi:id="_Hs5YYRbHEeS6rMUvs75EeQ" label="彩通宝" iconURI="platform:/plugin/com.dsideal.jbp/icons/jbp32.gif" x="0" y="0" width="800" height="600">
+    <tags>shellMaximized</tags>
+    <children xsi:type="advanced:PerspectiveStack" xmi:id="_hy7eYBbNEeS6rMUvs75EeQ" elementId="com.dsideal.jbp.perspectivestack.0">
+      <children xsi:type="advanced:Perspective" xmi:id="_ilqi4BbNEeS6rMUvs75EeQ" elementId="com.dsideal.jbp.perspective.0">
+        <children xsi:type="basic:PartSashContainer" xmi:id="_jruzEBbNEeS6rMUvs75EeQ" elementId="com.dsideal.jbp.partsashcontainer.0" selectedElement="_mwQ7EBbNEeS6rMUvs75EeQ" horizontal="true">
+          <children xsi:type="basic:PartStack" xmi:id="_mwQ7EBbNEeS6rMUvs75EeQ" elementId="com.dsideal.jbp.partstack.0">
+            <children xsi:type="basic:Part" xmi:id="_oiOn8BbNEeS6rMUvs75EeQ" elementId="com.dsideal.jbp.part.0" contributionURI="bundleclass://com.dsideal.jbp.bt/com.dsideal.jbp.bt.parts.MultiplePart" label="倍投计算器" iconURI="platform:/plugin/com.dsideal.jbp.bt/icons/calc16.png"/>
+          </children>
+          <children xsi:type="basic:PartStack" xmi:id="_oBM-gBbNEeS6rMUvs75EeQ" elementId="com.dsideal.jbp.partstack.1">
+            <children xsi:type="basic:Part" xmi:id="_pbzUQBbNEeS6rMUvs75EeQ" elementId="com.dsideal.jbp.part.1" label="测试"/>
+          </children>
+        </children>
+      </children>
+    </children>
+    <mainMenu xmi:id="_aF53kBbpEeS6rMUvs75EeQ" elementId="com.dsideal.jbp.menu.0"/>
+  </children>
+  <addons xmi:id="_Hs5YYhbHEeS6rMUvs75EeQ" elementId="org.eclipse.e4.core.commands.service" contributionURI="bundleclass://org.eclipse.e4.core.commands/org.eclipse.e4.core.commands.CommandServiceAddon"/>
+  <addons xmi:id="_Hs5YYxbHEeS6rMUvs75EeQ" elementId="org.eclipse.e4.ui.contexts.service" contributionURI="bundleclass://org.eclipse.e4.ui.services/org.eclipse.e4.ui.services.ContextServiceAddon"/>
+  <addons xmi:id="_Hs5YZBbHEeS6rMUvs75EeQ" elementId="org.eclipse.e4.ui.bindings.service" contributionURI="bundleclass://org.eclipse.e4.ui.bindings/org.eclipse.e4.ui.bindings.BindingServiceAddon"/>
+  <addons xmi:id="_Hs5YZRbHEeS6rMUvs75EeQ" elementId="org.eclipse.e4.ui.workbench.commands.model" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.CommandProcessingAddon"/>
+  <addons xmi:id="_Hs5YZhbHEeS6rMUvs75EeQ" elementId="org.eclipse.e4.ui.workbench.handler.model" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.HandlerProcessingAddon"/>
+  <addons xmi:id="_Hs5YZxbHEeS6rMUvs75EeQ" elementId="org.eclipse.e4.ui.workbench.contexts.model" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.ContextProcessingAddon"/>
+  <addons xmi:id="_Hs5YaBbHEeS6rMUvs75EeQ" elementId="org.eclipse.e4.ui.workbench.bindings.model" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.swt/org.eclipse.e4.ui.workbench.swt.util.BindingProcessingAddon"/>
+</application:Application>
