@@ -1,31 +1,31 @@
-1.´´½¨ÏîÄ¿
+1.åˆ›å»ºé¡¹ç›®
 new Eclipse 4 Application Project
 
-2.ĞŞ¸Ä±êÌâºÍÍ¼±ê
+2.ä¿®æ”¹æ ‡é¢˜å’Œå›¾æ ‡
 Application.e4xmi -> Windows -> Trimmed Window
-ĞŞ¸ÄLabelºÍIcon URI£¬Í¼Æ¬Ê¹ÓÃ32*32¼´¿É
+ä¿®æ”¹Labelå’ŒIcon URIï¼Œå›¾ç‰‡ä½¿ç”¨32*32å³å¯
 
-3.ÉèÖÃµÇÂ¼´°¿Ú
+3.è®¾ç½®ç™»å½•çª—å£
 MANIFEST.MF -> Extensions -> org.eclipse.core.runtime.products
-Ìí¼Óproperty£¬lifeCycleURI = bundleclass://com.dsideal.jbp.login/com.dsideal.jbp.login.Login
+æ·»åŠ propertyï¼ŒlifeCycleURI = bundleclass://com.dsideal.jbp.login/com.dsideal.jbp.login.Login
 
 MANIFEST.MF -> Dependencies
-Ìí¼ÓÒÀÀµcom.dsideal.jbp.login
+æ·»åŠ ä¾èµ–com.dsideal.jbp.login
 
 com.dsideal.jbp.product -> Dependencies -> Add Required Plug-ins
-Ìí¼ÓÒÀÀµcom.dsideal.jbp.login£¬·ñÔòÔËĞĞÊ±È±Ê§ÒÀÀµ
+æ·»åŠ ä¾èµ–com.dsideal.jbp.loginï¼Œå¦åˆ™è¿è¡Œæ—¶ç¼ºå¤±ä¾èµ–
 
-µÇÂ¼ÏêÏ¸²Î¼Ócom.dsideal.jbp.login²å¼ş
+ç™»å½•è¯¦ç»†å‚åŠ com.dsideal.jbp.loginæ’ä»¶
 
-4.ÆÁÄ»´óĞ¡¡¢Î»ÖÃ
+4.å±å¹•å¤§å°ã€ä½ç½®
 Application.e4xmi -> Windows -> Trimmed Window -> Bounds(x,y,w,h)
-µ«ÊÇÔõÃ´²ÅÄÜ¾ÓÖĞÏÔÊ¾ÄØ? ÔİÊ±²»ÖªµÀ, ÔİÊ±ÉèÖÃ³ÉÈ«ÆÁÏÔÊ¾
+ä½†æ˜¯æ€ä¹ˆæ‰èƒ½å±…ä¸­æ˜¾ç¤ºå‘¢? æš‚æ—¶ä¸çŸ¥é“, æš‚æ—¶è®¾ç½®æˆå…¨å±æ˜¾ç¤º
 
-È«ÆÁÏÔÊ¾
+å…¨å±æ˜¾ç¤º
 Application.e4xmi -> Windows -> Trimmed Window -> Supplementary
-Ìí¼Ótags£ºshellMaximized
-×îĞ¡»¯ÊÇshellMinimized
+æ·»åŠ tagsï¼šshellMaximized
+æœ€å°åŒ–æ˜¯shellMinimized
 
-5.×¢ÒâÊÂÏî
-ÔËĞĞ³ö´íÊ±¼ì²éRun ConfigurationsÅäÖÃ
-ĞŞ¸Ä²»Æğ×÷ÓÃĞŞ¸ÄRun ConfigurationsÅäÖÃ
+5.æ³¨æ„äº‹é¡¹
+è¿è¡Œå‡ºé”™æ—¶æ£€æŸ¥Run Configurationsé…ç½®
+ä¿®æ”¹ä¸èµ·ä½œç”¨ä¿®æ”¹Run Configurationsé…ç½®
