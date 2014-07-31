@@ -1,20 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<application:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:advanced="http://www.eclipse.org/ui/2010/UIModel/application/ui/advanced" xmlns:application="http://www.eclipse.org/ui/2010/UIModel/application" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmi:id="_Hs5YYBbHEeS6rMUvs75EeQ" elementId="org.eclipse.e4.ide.application">
+<application:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:advanced="http://www.eclipse.org/ui/2010/UIModel/application/ui/advanced" xmlns:application="http://www.eclipse.org/ui/2010/UIModel/application" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" xmi:id="_Hs5YYBbHEeS6rMUvs75EeQ" elementId="org.eclipse.e4.ide.application">
   <children xsi:type="basic:TrimmedWindow" xmi:id="_Hs5YYRbHEeS6rMUvs75EeQ" label="彩通宝" iconURI="platform:/plugin/com.dsideal.jbp/icons/jbp32.gif" x="0" y="0" width="800" height="600">
     <tags>shellMaximized</tags>
     <children xsi:type="advanced:PerspectiveStack" xmi:id="_hy7eYBbNEeS6rMUvs75EeQ" elementId="com.dsideal.jbp.perspectivestack.0">
       <children xsi:type="advanced:Perspective" xmi:id="_ilqi4BbNEeS6rMUvs75EeQ" elementId="com.dsideal.jbp.perspective.0">
-        <children xsi:type="basic:PartSashContainer" xmi:id="_jruzEBbNEeS6rMUvs75EeQ" elementId="com.dsideal.jbp.partsashcontainer.0" selectedElement="_mwQ7EBbNEeS6rMUvs75EeQ" horizontal="true">
-          <children xsi:type="basic:PartStack" xmi:id="_mwQ7EBbNEeS6rMUvs75EeQ" elementId="com.dsideal.jbp.partstack.0">
+        <children xsi:type="basic:PartSashContainer" xmi:id="_jruzEBbNEeS6rMUvs75EeQ" elementId="com.dsideal.jbp.partsashcontainer.0" containerData="10000" selectedElement="_mwQ7EBbNEeS6rMUvs75EeQ" horizontal="true">
+          <children xsi:type="basic:PartStack" xmi:id="_mwQ7EBbNEeS6rMUvs75EeQ" elementId="com.dsideal.jbp.partstack.0" containerData="6000">
             <children xsi:type="basic:Part" xmi:id="_oiOn8BbNEeS6rMUvs75EeQ" elementId="com.dsideal.jbp.part.0" contributionURI="bundleclass://com.dsideal.jbp.bt/com.dsideal.jbp.bt.parts.MultiplePart" label="倍投计算器" iconURI="platform:/plugin/com.dsideal.jbp.bt/icons/calc16.png"/>
           </children>
-          <children xsi:type="basic:PartStack" xmi:id="_oBM-gBbNEeS6rMUvs75EeQ" elementId="com.dsideal.jbp.partstack.1">
-            <children xsi:type="basic:Part" xmi:id="_pbzUQBbNEeS6rMUvs75EeQ" elementId="com.dsideal.jbp.part.1" label="测试"/>
+          <children xsi:type="basic:PartStack" xmi:id="_oV0xQBhaEeSDCfpHyT-_dA" elementId="com.dsideal.jbp.partstack.1" containerData="4000">
+            <children xsi:type="basic:Part" xmi:id="_pbzUQBbNEeS6rMUvs75EeQ" elementId="com.dsideal.jbp.part.1" label="测试" closeable="true"/>
           </children>
         </children>
       </children>
     </children>
-    <mainMenu xmi:id="_aF53kBbpEeS6rMUvs75EeQ" elementId="com.dsideal.jbp.menu.0"/>
+    <mainMenu xmi:id="_aF53kBbpEeS6rMUvs75EeQ" elementId="com.dsideal.jbp.menu.0">
+      <children xsi:type="menu:Menu" xmi:id="_Y01FkBh7EeSDCfpHyT-_dA" elementId="com.dsideal.jbp.menu.1" label="账户管理">
+        <children xsi:type="menu:DirectMenuItem" xmi:id="_hRUJsBh7EeSDCfpHyT-_dA" elementId="com.dsideal.jbp.directmenuitem.0" label="账户列表"/>
+        <children xsi:type="menu:DirectMenuItem" xmi:id="__zgOwBh9EeSDCfpHyT-_dA" elementId="com.dsideal.jbp.directmenuitem.1" label="新增账户"/>
+        <children xsi:type="menu:DirectMenuItem" xmi:id="_s111cBh-EeSDCfpHyT-_dA" elementId="com.dsideal.jbp.directmenuitem.5" label="修改密码"/>
+        <children xsi:type="menu:MenuSeparator" xmi:id="_wub3oBh-EeSDCfpHyT-_dA" elementId="com.dsideal.jbp.menuseparator.0"/>
+        <children xsi:type="menu:DirectMenuItem" xmi:id="_uRVjEBh-EeSDCfpHyT-_dA" elementId="com.dsideal.jbp.directmenuitem.6" label="退出" contributionURI="bundleclass://com.dsideal.jbp/com.dsideal.jbp.handlers.ExitHandler"/>
+      </children>
+      <children xsi:type="menu:Menu" xmi:id="_NkFpwBh-EeSDCfpHyT-_dA" elementId="com.dsideal.jbp.menu.2" label="使用帮助">
+        <children xsi:type="menu:DirectMenuItem" xmi:id="_jgEY4Bh-EeSDCfpHyT-_dA" elementId="com.dsideal.jbp.directmenuitem.3" label="使用说明"/>
+        <children xsi:type="menu:MenuSeparator" xmi:id="_6xJSsBh-EeSDCfpHyT-_dA" elementId="com.dsideal.jbp.menuseparator.1"/>
+        <children xsi:type="menu:DirectMenuItem" xmi:id="_ZnoUIBh-EeSDCfpHyT-_dA" elementId="com.dsideal.jbp.directmenuitem.2" label="软件更新"/>
+        <children xsi:type="menu:MenuSeparator" xmi:id="_7L7KMBh-EeSDCfpHyT-_dA" elementId="com.dsideal.jbp.menuseparator.2"/>
+        <children xsi:type="menu:DirectMenuItem" xmi:id="_l6DIABh-EeSDCfpHyT-_dA" elementId="com.dsideal.jbp.directmenuitem.4" label="关于我们"/>
+      </children>
+    </mainMenu>
   </children>
   <addons xmi:id="_Hs5YYhbHEeS6rMUvs75EeQ" elementId="org.eclipse.e4.core.commands.service" contributionURI="bundleclass://org.eclipse.e4.core.commands/org.eclipse.e4.core.commands.CommandServiceAddon"/>
   <addons xmi:id="_Hs5YYxbHEeS6rMUvs75EeQ" elementId="org.eclipse.e4.ui.contexts.service" contributionURI="bundleclass://org.eclipse.e4.ui.services/org.eclipse.e4.ui.services.ContextServiceAddon"/>
