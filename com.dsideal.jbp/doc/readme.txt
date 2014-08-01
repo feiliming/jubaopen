@@ -46,6 +46,9 @@ Application.e4xmi -> Windows -> Trimmed Window -> Main Menu -> Menu
 DirectMenuItem直接指定Handler class
 HandledMenuItem指定Command
 
+9.添加日志
+编译时导入依赖包META-INF -> MANIFEST.MF -> Dependencies -> Imported Packages -> Add -> org.slf4j
+运行时com.dsideal.jbp.product -> Dependencies -> Add Required Plug-ins -> com.dsideal.jbp.logging
 
 
 

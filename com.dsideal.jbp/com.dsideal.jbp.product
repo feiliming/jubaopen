@@ -13,9 +13,21 @@
 
    <windowImages/>
 
+
+   <launcher>
+      <solaris/>
+      <win useIco="false">
+         <bmp/>
+      </win>
+   </launcher>
+
+   <vm>
+   </vm>
+
    <plugins>
       <plugin id="com.dsideal.jbp"/>
       <plugin id="com.dsideal.jbp.bt"/>
+      <plugin id="com.dsideal.jbp.logging"/>
       <plugin id="com.dsideal.jbp.login"/>
       <plugin id="com.ibm.icu"/>
       <plugin id="javax.annotation"/>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<configuration>
+
+  <appender name="STDOUT"
+    class="ch.qos.logback.core.ConsoleAppender">
+    <!-- encoders are assigned by default the type
+         ch.qos.logback.classic.encoder.PatternLayoutEncoder -->
+    <encoder>
+      <pattern>%d{HH:mm:ss.SSS} [%thread] [jbp] %-5level %logger{0} - %msg%n</pattern>
+    </encoder>
+  </appender>
+  
+  <!-- yyyyMMdd'T'HHmmss -->
+  <timestamp key="bySecond" datePattern="yyyyMMdd" />  
+  <appender name="FILE" class="ch.qos.logback.core.FileAppender">
+    <File>jbp-${bySecond}.log</File>
+    <encoder>
+      <pattern>%d{HH:mm:ss.SSS} [%thread] [jbp] %-5level %logger{0} - %msg%n</pattern>
+    </encoder>
+  </appender>
+
+  <root level="debug">
+    <appender-ref ref="STDOUT" />
+    <appender-ref ref="FILE"/>
+  </root>
+</configuration>
+

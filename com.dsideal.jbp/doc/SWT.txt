@@ -1,0 +1,9 @@
+Operating system resources in SWT refer to native resources used by those (operating system) resourcebased objects, 
+e.g. Display, Color, Font, GC, Image, Printer, Region, and Widgets. Most of the classes in the following packages are resource-based:
+org.eclipse.swt.custom
+org.eclipse.swt.graphics
+org.eclipse.swt.widgets
+You can check whether a class has a dispose() method. If it does, then it is very likely resource-based. Otherwise, it isn't.
+1.If you created it, you dispose it.
+2.Disposing the parent disposes the children.
+
